@@ -1,0 +1,51 @@
+int main()
+{   
+    int i;
+    int contadorMujeres=0;
+    int contadorHombre=0;
+    int edadMax;
+    int edadMin;
+    float edad;
+    char sexo;
+    float legajo;
+    
+    for( i = 0 ; i < 5 ; i++ ){
+        
+        printf("ingrese la edad: ");
+        scanf(" %f ", &edad);
+        if(i==0){
+            edadMin=edad;
+            edadMin=edad;
+        }else{
+            if(edadMin > edad){
+                edadMin=edad;
+            }else{
+                if(edadMax < edad){
+                    edadMax=edad;
+                }
+            }
+        }
+        
+        printf("ingresar el sexo (f/m): ");
+        scanf(" %c ", &sexo);
+        if(sexo=="f"){
+            contadorMujeres++;
+        }else{
+            if(sexo=="m"){
+                contadorHombre++;
+            }
+        }
+        printf("ingrese su legajo: ");
+        scanf(" %f ", &legajo);
+    }
+    
+    printf(" \n La cantidad de lmujeres ingresadas es de %c", sexo);
+    
+    printf(" \n La cantidad de hombres es de %c", sexo);
+    
+    printf(" \n La edad maxima es de %f", edadMax);
+    
+    printf(" \n la edad minima es de %f", edadMin);
+    
+    return 0;
+}
